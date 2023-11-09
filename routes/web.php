@@ -14,6 +14,9 @@ use App\Http\Controllers\Auth\AuthController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    return redirect()->route('login');
+});
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
 
@@ -38,3 +41,5 @@ Route::get('grafico5', [AuthController::class, 'grafico5'])->name('grafico5');
 Route::get('grafico6', [AuthController::class, 'grafico6'])->name('grafico6'); 
 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('perfil', [AuthController::class, 'perfil'])->name('perfil');
