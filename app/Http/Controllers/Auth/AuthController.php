@@ -88,7 +88,7 @@ class AuthController extends Controller
 
 		if (Auth::attempt($credentials)) {
 
-			return redirect()->intended('dashboard')
+			return redirect()->intended('/')
 
 				->withSuccess('Se logueo correctamente al sistema.');
 		}
@@ -132,7 +132,7 @@ class AuthController extends Controller
 
 
 
-		return redirect("dashboard")->withSuccess('Se logueo correctamente al sistema.');
+		return redirect("login")->withSuccess('Se logueo correctamente al sistema.');
 	}
 
 
@@ -162,6 +162,31 @@ class AuthController extends Controller
 	}
 
 
+
+		/**
+
+	 * Write code on Method
+
+	 *
+
+	 * @return response()
+
+	 */
+
+	 public function perfil()
+
+	 {
+ 
+		 if (Auth::check()) {
+ 
+			 return view('perfil');
+		 }
+ 
+ 
+ 
+		 return redirect("login")->withSuccess('Ingreso credenciales incorrectas.');
+	 }
+ 
 
 	/**
 

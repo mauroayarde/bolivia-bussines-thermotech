@@ -99,12 +99,12 @@
             <nav class="dashboard-nav-list">
 
                 <a href="{{ route('dashboard') }}" class="dashboard-nav-item">
-                    <i class="fas fa-tachometer-alt"></i> Inicio
+                    <i class="fas fa-tachometer-alt"></i> Home
                 </a>
 
                 <div class='dashboard-nav-dropdown'>
                     <a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle">
-                        <i class="fas fa-users"></i> Consultas
+                        <i class="fas fa-users"></i> Reportes
                     </a>
                     <div class='dashboard-nav-dropdown-menu'>
                         <a href="{{ route('grafico1') }}" class="dashboard-nav-dropdown-item">Consulta 1</a>

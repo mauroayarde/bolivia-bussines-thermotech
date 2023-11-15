@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\AuthController;
 
+use App\Http\Controllers\UserSettingsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +28,7 @@ Route::get('registration', [AuthController::class, 'registration'])->name('regis
 
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post'); 
 
-Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard'); 
+Route::get('/', [AuthController::class, 'dashboard'])->name('dashboard'); 
 
 Route::get('grafico1', [AuthController::class, 'grafico1'])->name('grafico1'); 
 
@@ -39,6 +41,11 @@ Route::get('grafico4', [AuthController::class, 'grafico4'])->name('grafico4');
 Route::get('grafico5', [AuthController::class, 'grafico5'])->name('grafico5'); 
 
 Route::get('grafico6', [AuthController::class, 'grafico6'])->name('grafico6'); 
+
+Route::get('perfil', [AuthController::class, 'perfil'])->name('perfil');
+
+Route::get('/NewPassword',  [UserSettingsController::class,'NewPassword'])->name('NewPassword')->middleware('auth');
+Route::post('/change/password',  [UserSettingsController::class,'changePassword'])->name('changePassword');
 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 

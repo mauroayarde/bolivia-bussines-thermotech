@@ -12,9 +12,9 @@
                 class="fas fa-anchor"></i> <span><img src="{{ asset('logo.png') }}" alt=""></span></a></header>
         <nav class="dashboard-nav-list"><a href="#" class="dashboard-nav-item"><i class="fas fa-home"></i>
             Home </a><a
-                href="{{ route('dashboard') }}" class="dashboard-nav-item active"><i class="fas fa-tachometer-alt"></i> dashboard
+                href="{{ route('dashboard') }}" class="dashboard-nav-item active"><i class="fas fa-tachometer-alt"></i> Home
         </a>            <div class='dashboard-nav-dropdown'><a href="#!" class="dashboard-nav-item dashboard-nav-dropdown-toggle"><i
-                    class="fas fa-users"></i> Consultas </a>
+                    class="fas fa-users"></i> Reportes </a>
 
                 <div class='dashboard-nav-dropdown-menu'><a href="{{ route('grafico1') }}" class="dashboard-nav-dropdown-item">Consulta 1</a><a
                         href="{{ route('grafico2') }}" class="dashboard-nav-dropdown-item">Consulta 2</a><a
@@ -24,7 +24,7 @@
                         href="{{ route('grafico5') }}" class="dashboard-nav-dropdown-item">Consulta 5</a></div>
             </div>
             <a
-                    href="#" class="dashboard-nav-item"><i class="fas fa-user"></i> Perfil </a>
+                    href="{{ route('perfil') }}" class="dashboard-nav-item"><i class="fas fa-user"></i> Perfil </a>
           <div class="nav-item-divider"></div>
         </nav>
     </div>
