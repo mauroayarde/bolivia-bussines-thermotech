@@ -13,11 +13,11 @@
                         class="dashboard-nav-item dashboard-nav-dropdown-toggle active"><i class="fas fa-users"></i> Reportes </a>
 
                     <div class='dashboard-nav-dropdown-menu'><a href="{{ route('grafico1') }}"
-                            class="dashboard-nav-dropdown-item">Consulta 1</a><a href="{{ route('grafico2') }}"
-                            class="dashboard-nav-dropdown-item">Consulta 2</a><a href="{{ route('grafico3') }}"
-                            class="dashboard-nav-dropdown-item">Consulta 3</a><a href="{{ route('grafico4') }}"
-                            class="dashboard-nav-dropdown-item active">Consulta 4</a><a href="{{ route('grafico5') }}"
-                            class="dashboard-nav-dropdown-item">Consulta 5</a></div>
+                            class="dashboard-nav-dropdown-item active">KPI de Ventas por sucursal </a><a href="{{ route('grafico2') }}"
+                            class="dashboard-nav-dropdown-item">KPI de Ventas por producto </a><a href="{{ route('grafico3') }}"
+                            class="dashboard-nav-dropdown-item">KPI de Ventas por mes/año </a><a href="{{ route('grafico4') }}"
+                            class="dashboard-nav-dropdown-item">KPI de ventas por año </a><a href="{{ route('grafico5') }}"
+                            class="dashboard-nav-dropdown-item">KPI monto de ventas por producto </a></div>
                 </div>
                 <a href="{{ route('perfil') }}" class="dashboard-nav-item"><i class="fas fa-user"></i> Perfil </a>
                 <div class="nav-item-divider"></div>
@@ -33,7 +33,7 @@
                             <br />
                             <p> </p>
                             <div class="card-footer" style="font-size: 15px">
-                                <p class="card-text"> Se obtendrá con este indicador cuales son las ventas generales de cada
+                                <p class="card-text"> Se obtendrá con este indicador cuales son las ventas generales de cada mes por 
                                     año.</p>
                             </div>
                             @if (session('success'))
@@ -47,7 +47,7 @@
             </div>
 
             <center>
-                <div id="chart_div" style="width: 1000px; height: 500px; margin-left:-30px;"></div>
+                <div id="chart_div" style="width: 1110px; height: 450px; margin-left:-50px;"></div>
             </center>
 
         </div>
@@ -81,25 +81,30 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Años', 'Ventas'],
-                ['2013', 1000],
-                ['2014', 1170],
-                ['2015', 660],
-                ['2016', 700],
-                ['2016', 500],
-                ['2017', 300],
-                ['2018', 1050],
-                ['2019', 1030],
-                ['2020', 800],
-                ['2021', 900],
-                ['2022', 1100]
+                ['Meses', 'Ventas'],
+                ['Enero', 6.25 ],
+                ['Febrero', 8.85],
+                ['Marzo', 7.72],
+                ['Abril', 8.93],
+                ['Mayo', 9.3],
+                ['Junio', 9.66],
+                ['Julio', 8.05],
+                ['Agosto', 4.95],
+                ['Septiembre', 4.09],
+                ['Octubre', 4.09],
+                ['Noviembre', 3.40],
+                ['Diciembre', 4.76]
             ]);
 
             var options = {
+                title: '2018',
                 hAxis: {
-                    title: 'Años',
+                    title: 'Meses',
                     titleTextStyle: {
                         color: '#333'
+                    },
+                    textStyle: {
+                        fontSize: '12'
                     }
                 },
                 vAxis: {

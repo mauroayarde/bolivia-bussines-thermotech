@@ -275,7 +275,7 @@ h1, .h1 {
 
 .dashboard-nav {
     background-color: #007BFF;
-    top: 56px;
+   
 }
 
 .dashboard-nav a {

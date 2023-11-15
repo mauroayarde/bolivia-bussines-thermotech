@@ -14,11 +14,12 @@
                         class="dashboard-nav-item dashboard-nav-dropdown-toggle active"><i class="fas fa-users"></i> Reportes </a>
 
                     <div class='dashboard-nav-dropdown-menu'><a href="{{ route('grafico1') }}"
-                            class="dashboard-nav-dropdown-item">Consulta 1</a><a href="{{ route('grafico2') }}"
-                            class="dashboard-nav-dropdown-item">Consulta 2</a><a href="{{ route('grafico3') }}"
-                            class="dashboard-nav-dropdown-item">Consulta 3</a><a href="{{ route('grafico4') }}"
-                            class="dashboard-nav-dropdown-item">Consulta 4</a><a href="{{ route('grafico5') }}"
-                            class="dashboard-nav-dropdown-item active">Consulta 5</a></div>
+                            class="dashboard-nav-dropdown-item active">KPI de Ventas por sucursal </a><a href="{{ route('grafico2') }}"
+                            class="dashboard-nav-dropdown-item">KPI de Ventas por producto </a><a href="{{ route('grafico3') }}"
+                            class="dashboard-nav-dropdown-item">KPI de Ventas por mes/año </a><a href="{{ route('grafico4') }}"
+                            class="dashboard-nav-dropdown-item">KPI de ventas por año </a><a href="{{ route('grafico5') }}"
+                            class="dashboard-nav-dropdown-item">KPI monto de ventas por producto </a></div>
+                            
                 </div>
                 <a href="{{ route('perfil') }}" class="dashboard-nav-item"><i class="fas fa-user"></i> Perfil </a>
                 <div class="nav-item-divider"></div>
@@ -83,24 +84,26 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Productos', 'Monto Total'],
-                ['10 lts Calefon thermotech', 2.66],
-                ['16 lts Calefon Lombard a GN', 2.8],
-                ['16 lts Calefon Lombard a LPG', 3.97],
-                ['20 lts Calefon Lombard a GN', 3.95],
-                ['20 lts Calefon Lombard a LPG', 3.40],
-                ['40 gls, termotanque Electrico American S.', 2.42],
-                ['8,5 gls termotanque electrico', 3.5],
-                ['Calefon Thermotech de 8KW', 2.37],
-                ['Estufa 6500 Kcal.', 2.15],
-                ['Extractor 80 cm', 2.79],
-                ['Termotanque de 30 gls', 2.86],
-                ['termotanque de 50 gls', 1.875]
+                ['Mes/Productos', 'Monto Total'],
+                ['Enero 20 lts Calefon Lombard a GN', 3.95],
+                ['Febrero 20 lts Calefon Lombard a LPG', 3.40],
+                ['Marzo Calefon Thermotech de 8KW', 2.37],
+                ['Abril 10 lts Calefon thermotech', 2.66],
+                ['Mayo Estufa 6500 Kcal.', 2.15],
+                ['Junio 8,5 gls termotanque electrico', 3.5],
+                ['Julio 40 gls, termotanque Electrico American S.', 2.42],
+                ['Agosto 16 lts Calefon Lombard a GN', 2.8],
+                ['Septiembre termotanque de 50 gls', 1.875],
+                ['Octubre Termotanque de 30 gls', 2.86],
+                ['Noviembre Extractor 80 cm', 2.79],
+                ['Diciembre 16 lts Calefon Lombard a LPG', 3.97]
+               
+                
             ]);
 
             var options = {
                 chart: {
-                    title: '',
+                    title: '2019',
                     subtitle: '',
                 },
                 bars: 'horizontal' // Required for Material Bar Charts.
