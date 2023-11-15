@@ -7,7 +7,8 @@
     }
 
     .dashboard-content {
-        margin: 0px;
+        margin: 27px;
+        margin-top:  -10px;
 
     }
 
@@ -89,6 +90,9 @@
 @section('content')
     <div class="dashboard">
         <div class="dashboard-nav">
+        </br>
+        </br>
+          
             <header>
                 <a href="#!" class="menu-toggle"><i class="fas fa-bars"></i></a>
                 <a href="#" class="brand-logo">
@@ -107,11 +111,11 @@
                         <i class="fas fa-users"></i> Reportes
                     </a>
                     <div class='dashboard-nav-dropdown-menu'>
-                        <a href="{{ route('grafico1') }}" class="dashboard-nav-dropdown-item">Consulta 1</a>
-                        <a href="{{ route('grafico2') }}" class="dashboard-nav-dropdown-item">Consulta 2</a>
-                        <a href="{{ route('grafico3') }}" class="dashboard-nav-dropdown-item">Consulta 3</a>
-                        <a href="{{ route('grafico4') }}" class="dashboard-nav-dropdown-item">Consulta 4</a>
-                        <a href="{{ route('grafico5') }}" class="dashboard-nav-dropdown-item">Consulta 5</a>
+                        <a href="{{ route('grafico1') }}" class="dashboard-nav-dropdown-item">KPI de Ventas por sucursal</a>
+                        <a href="{{ route('grafico2') }}" class="dashboard-nav-dropdown-item">KPI de Ventas por producto </a>
+                        <a href="{{ route('grafico3') }}" class="dashboard-nav-dropdown-item">KPI de Ventas por mes/año</a>
+                        <a href="{{ route('grafico4') }}" class="dashboard-nav-dropdown-item">KPI de ventas por año</a>
+                        <a href="{{ route('grafico5') }}" class="dashboard-nav-dropdown-item">KPI monto de ventas por producto</a>
                     </div>
                 </div>
                 <a href="{{ route('perfil') }}" class="dashboard-nav-item"><i class="fas fa-user"></i> Perfil</a>
